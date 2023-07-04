@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 #/public/storage
-/storage/*.key
+#/storage/*.key
 #vendor
 .DS_Store
 Thumbs.db
@@ -33,7 +33,7 @@ yarn.lock
 
 public/mix-manifest.json
 
-public/themes
+# public/themes
 public/docs
 resources/docs
 
@@ -41,6 +41,6 @@ resources/docs
 /storage/.license
 #/storage/fonts
 
-/log
+# /log
 
 storage/framework/laravel-excel/
