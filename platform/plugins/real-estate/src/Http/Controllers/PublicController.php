@@ -148,8 +148,16 @@ class PublicController extends Controller
         foreach ($property->images as $image) {
             $images[] = RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage());
         }
+        $floor_images = [];
+        foreach ($property->floor_images as $flimage) {
+            $floor_images[] = RvMedia::getImageUrl($flimage, null, false, RvMedia::getDefaultImage());
+        }
+        $location_images = [];
+        foreach ($property->location_images as $flimage) {
+            $location_images[] = RvMedia::getImageUrl($flimage, null, false, RvMedia::getDefaultImage());
+        }
 
-        return Theme::scope('real-estate.property', compact('property', 'images'))->render();
+        return Theme::scope('real-estate.property', compact('property', 'images', 'floor_images','location_images'))->render();
     }
 
     /**

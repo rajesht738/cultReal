@@ -37,9 +37,13 @@ class Property extends BaseModel
         'type',
         'description',
         'content',
+        'highlight',
         'location',
         'label',
         'images',
+        'floor_images',
+        'location_images',
+        'site_images',
         'number_bedroom',
         'number_bathroom',
         'number_floor',
@@ -117,10 +121,54 @@ class Property extends BaseModel
             return [];
         }
     }
+    public function getFloorImagesAttribute($value)
+    {
+        try {
+            if ($value === '[null]') {
+                return [];
+            }
+
+            $images = json_decode((string)$value, true);
+
+            if (is_array($images)) {
+                $images = array_filter($images);
+            }
+
+            return $images ?: [];
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
+    public function getLocationImagesAttribute($value)
+    {
+        try {
+            if ($value === '[null]') {
+                return [];
+            }
+
+            $images = json_decode((string)$value, true);
+
+            if (is_array($images)) {
+                $images = array_filter($images);
+            }
+
+            return $images ?: [];
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
 
     /**
      * @return string|null
      */
+    public function getFloorImageAttribute(): ?string
+    {
+        return Arr::first($this->floor_images) ?? null;
+    }
+    public function getLocationImageAttribute(): ?string
+    {
+        return Arr::first($this->location_images) ?? null;
+    }
     public function getImageAttribute(): ?string
     {
         return Arr::first($this->images) ?? null;

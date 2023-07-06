@@ -102,7 +102,6 @@
                 <!-- Single Block Wrap - Gallery -->
                 {!! Theme::partial('real-estate.elements.gallery', compact('property')) !!}
 
-
                 <!-- Single Block Wrap - Nearby -->
                 {!! Theme::partial('real-estate.elements.nearby', ['property' => $property]) !!}
 
@@ -170,25 +169,6 @@
                         </div>
                     @endif
                     {!! dynamic_sidebar('property_sidebar') !!}
-                </div>
-            </div>
-            <div class="row">
-                {{-- {{dd($property)}} --}}
-                {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
-            </div>
-            <div class="row">
-                <div class="property_block_wrap">
-                    {{-- {!! ($property->highlight) !!} --}}
-                    {{-- <div class="property_block_wrap_header">
-                        <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo" aria-controls="clTwo"
-                           href="javascript:void(0);" aria-expanded="true"><h4
-                                class="property_block_title">HighLight</h4></a>
-                    </div> --}}
-                    {{-- <div id="clTwo" class="panel-collapse collapse show">
-                        <div class="block-body">
-
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>

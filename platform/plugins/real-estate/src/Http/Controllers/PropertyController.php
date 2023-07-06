@@ -133,6 +133,7 @@ class PropertyController extends BaseController
      */
     public function update($id, PropertyRequest $request, BaseHttpResponse $response, SaveFacilitiesService $saveFacilitiesService)
     {
+        // dd($request->toArray());
         $property = $this->propertyRepository->findOrFail($id);
 
         do_action(ACTION_BEFORE_UPDATE_PROPERTY, $request, $property);
@@ -140,6 +141,9 @@ class PropertyController extends BaseController
         $property->fill($request->except(['expire_date']));
         $property->author_type = Account::class;
         $property->images = json_encode(array_filter($request->input('images', [])));
+        $property->floor_images = json_encode(array_filter($request->input('floor_images', [])));
+        $property->location_images = json_encode(array_filter($request->input('location_images', [])));
+        $property->site_images = json_encode(array_filter($request->input('site_images', [])));
         $property->moderation_status = $request->input('moderation_status');
         $property->never_expired = $request->input('never_expired');
 

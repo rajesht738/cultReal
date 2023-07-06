@@ -173,10 +173,33 @@ class PropertyForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
+            ->add('highlight', 'editor', [
+                'label'      => 'HighLights',
+                'label_attr' => ['class' => 'control-label required'],
+                'attr'       => [
+                    'rows'            => 4,
+                    'with-short-code' => true,
+                ],
+            ])
             ->add('images[]', 'mediaImages', [
                 'label'      => trans('plugins/real-estate::property.form.images') . ' (' . __('The resolution image should be 1280x850px') . ')',
                 'label_attr' => ['class' => 'control-label'],
                 'values'     => $this->getModel()->id ? $this->getModel()->images : [],
+            ])
+            ->add('floor_images[]', 'mediaImages', [
+                'label'      => 'Floor Images',
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $this->getModel()->id ? $this->getModel()->floor_images : [],
+            ])
+            ->add('location_images[]', 'mediaImages', [
+                'label'      => 'Location Plan Image',
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $this->getModel()->id ? $this->getModel()->location_images : [],
+            ])
+            ->add('site_images[]', 'mediaImages', [
+                'label'      => 'Site Plan Image',
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $this->getModel()->id ? $this->getModel()->site_images : [],
             ])
             ->add('city_id', 'customSelect', [
                 'label'      => trans('plugins/real-estate::property.form.city'),

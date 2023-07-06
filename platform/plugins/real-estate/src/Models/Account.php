@@ -15,6 +15,7 @@ use Laravel\Sanctum\HasApiTokens;
 use RvMedia;
 use RealEstateHelper;
 
+
 /**
  * @mixin \Eloquent
  */
