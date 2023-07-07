@@ -44,6 +44,9 @@
                                 </div>
 
                             </div>
+                            <div class="row"  style="text-align:center; font-family: var(--font-heading);">
+                                <span>Thousands of projects | Top Developers | Domestict & International Projects</span>
+                            </div>
                             <!-- Collapse Advance Search Form -->
                             <div class="collapse" id="advance-search" aria-expanded="false" role="banner">
 

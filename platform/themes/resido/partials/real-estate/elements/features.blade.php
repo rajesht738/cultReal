@@ -11,7 +11,8 @@
                 @if ($property->number_bedroom)
                     <li>
                         <strong>{{ __('Bedrooms:') }}</strong>
-                        {{ number_format($property->number_bedroom) }} {{ __('Beds') }}
+                        {{-- {{ number_format($property->number_bedroom) }} {{ __('Beds') }} --}}
+                        {{ $property->number_bedroom }}
                     </li>
                 @endif
                 @if ($property->number_bathroom)

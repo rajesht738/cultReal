@@ -144,6 +144,8 @@ class PropertyController extends BaseController
         $property->floor_images = json_encode(array_filter($request->input('floor_images', [])));
         $property->location_images = json_encode(array_filter($request->input('location_images', [])));
         $property->site_images = json_encode(array_filter($request->input('site_images', [])));
+        $property->payment_plan_images = json_encode(array_filter($request->input('payment_plan_images', [])));
+        $property->price_plan_images = json_encode(array_filter($request->input('price_plan_images', [])));
         $property->moderation_status = $request->input('moderation_status');
         $property->never_expired = $request->input('never_expired');
 

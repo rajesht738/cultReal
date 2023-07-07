@@ -22,99 +22,24 @@
     <div data-property-id="{{ $property->id }}"></div>
     <div class="container" style="max-width: 100%;">
         <div class="row">
-            {!! Theme::partial('real-estate.elements.amenities', ['property' => $property]) !!}
-            <!-- property main detail -->
             <div class="col-lg-8 col-md-12 col-sm-12">
-     <!-- Single Block Wrap -->
-     <div class="property_block_wrap style-2">
-
-        <div class="property_block_wrap_header">
-            <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo" aria-controls="clTwo"
-               href="javascript:void(0);" aria-expanded="true"><h4
-                    class="property_block_title">{{ __('Description') }}</h4></a>
-        </div>
-        <div id="clTwo" class="panel-collapse collapse show">
-            <div class="block-body">
-                {!! ($property->content) !!}
-            </div>
-        </div>
-    </div>
-     <div class="property_block_wrap">
-        {!! ($property->highlight) !!}
-        {{-- <div class="property_block_wrap_header">
-            <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo" aria-controls="clTwo"
-               href="javascript:void(0);" aria-expanded="true"><h4
-                    class="property_block_title">HighLight</h4></a>
-        </div> --}}
-        {{-- <div id="clTwo" class="panel-collapse collapse show">
-            <div class="block-body">
-
-            </div>
-        </div> --}}
-    </div>
-
-                @if('layout-1' === $headerLayout)
-                    <div class="property_block_wrap style-2 p-4">
-                        <div class="prt-detail-title-desc">
-                            <span class="prt-types {{ $property->type_slug }}">{{ $property->type_name }}</span>
-                            @if($propertyLabel)
-                                <span class="prt-types rent">{{ $propertyLabel }}</span>
-                            @endif
-                            <h3>{{ $property->name }}</h3>
-                            <span><i class="lni-map-marker"></i> {{ $property->location . ', ' . $property->city_name }}</span>
-                            <h3 class="prt-price-fix">{{ $property->price_html }}</h3>
-                            {!! Theme::partial('real-estate.elements.list-fx-features', compact('property')) !!}
-                        </div>
-                    </div>
-                @endif
-                <!-- Single Block Wrap - Features -->
-                {!! Theme::partial('real-estate.elements.features', ['property' => $property]) !!}
-
-
-                <!-- Single Block Wrap - Amenities -->
-
-                {{-- {!! Theme::partial('real-estate.properties.slick-gallery', ['property' => $property]) !!} --}}
-
-                <!-- Single Block Wrap - Video -->
-                {!! Theme::partial('real-estate.elements.video', ['object' => $property]) !!}
-
-                <!-- Single Block Wrap -->
                 <div class="property_block_wrap style-2">
 
                     <div class="property_block_wrap_header">
-                        <a data-bs-toggle="collapse" data-parent="#loca" data-bs-target="#clSix" aria-controls="clSix"
-                           href="javascript:void(0);" aria-expanded="true" class="collapsed"><h4
-                                class="property_block_title">{{ __('Location') }}</h4></a>
+                        <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo" aria-controls="clTwo"
+                           href="javascript:void(0);" aria-expanded="true"><h4
+                                class="property_block_title">WELCOME TO  <span style="font-size: 17px; font-weight:700;text-transform: uppercase;">{{ $property->name }}</span></h4></a>
                     </div>
-
-                    <div id="clSix" class="panel-collapse collapse show">
+                    <div id="clTwo" class="panel-collapse collapse show">
                         <div class="block-body">
-                            @if ($property->latitude && $property->longitude)
-                                {!! Theme::partial('real-estate.elements.traffic-map-modal', ['location' => $property->location . ', ' . $property->city_name]) !!}
-                            @else
-                                {!! Theme::partial('real-estate.elements.gmap-canvas', ['location' => $property->location]) !!}
-                            @endif
+                            {!! ($property->content) !!}
                         </div>
                     </div>
-
                 </div>
+                  <!-- Single Block Wrap - Features -->
+                  {!! Theme::partial('real-estate.elements.features', ['property' => $property]) !!}
 
-                <!-- Single Block Wrap - Gallery -->
-                {!! Theme::partial('real-estate.elements.gallery', compact('property')) !!}
-
-
-                <!-- Single Block Wrap - Nearby -->
-                {!! Theme::partial('real-estate.elements.nearby', ['property' => $property]) !!}
-
-                @if(is_review_enabled())
-                    <!-- Single Review -->
-                    <div id="reviewWrapper">
-                        {!! Theme::partial('real-estate.elements.review', compact('property')) !!}
-                    </div>
-                @endif
             </div>
-
-            <!-- property Sidebar -->
             <div class="col-lg-4 col-md-12 col-sm-12">
 
                 <!-- Like And Share -->
@@ -171,26 +96,96 @@
                     @endif
                     {!! dynamic_sidebar('property_sidebar') !!}
                 </div>
-            </div>
-            <div class="row">
-                {{-- {{dd($property)}} --}}
-                {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
-            </div>
-            <div class="row">
-                <div class="property_block_wrap">
-                    {{-- {!! ($property->highlight) !!} --}}
-                    {{-- <div class="property_block_wrap_header">
-                        <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo" aria-controls="clTwo"
-                           href="javascript:void(0);" aria-expanded="true"><h4
-                                class="property_block_title">HighLight</h4></a>
-                    </div> --}}
-                    {{-- <div id="clTwo" class="panel-collapse collapse show">
-                        <div class="block-body">
 
-                        </div>
-                    </div> --}}
-                </div>
             </div>
+        </div>
+        <div class="row">
+
+            {!! Theme::partial('real-estate.elements.amenities', ['property' => $property]) !!}
+            <div class="property_block_wrap">
+                {!! ($property->highlight) !!}
+
+            </div>
+        </div>
+        <div class="row">
+            {{-- {{dd($property)}} --}}
+            {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
+        </div>
+        <div class="row">
+
+            <!-- property main detail -->
+            <div class="col-lg-8 col-md-12 col-sm-12">
+
+
+                @if('layout-1' === $headerLayout)
+                    <div class="property_block_wrap style-2 p-4">
+                        <div class="prt-detail-title-desc">
+                            <span class="prt-types {{ $property->type_slug }}">{{ $property->type_name }}</span>
+                            @if($propertyLabel)
+                                <span class="prt-types rent">{{ $propertyLabel }}</span>
+                            @endif
+                            <h3>{{ $property->name }}</h3>
+                            <span><i class="lni-map-marker"></i> {{ $property->location . ', ' . $property->city_name }}</span>
+                            <h3 class="prt-price-fix">{{ $property->price_html }}</h3>
+                            {!! Theme::partial('real-estate.elements.list-fx-features', compact('property')) !!}
+                        </div>
+                    </div>
+                @endif
+
+
+                <!-- Single Block Wrap - Amenities -->
+
+                {{-- {!! Theme::partial('real-estate.properties.slick-gallery', ['property' => $property]) !!} --}}
+
+                <!-- Single Block Wrap - Video -->
+                {!! Theme::partial('real-estate.elements.video', ['object' => $property]) !!}
+
+                <!-- Single Block Wrap -->
+                <div class="property_block_wrap style-2">
+
+
+
+
+                </div>
+
+                <!-- Single Block Wrap - Gallery -->
+                {!! Theme::partial('real-estate.elements.gallery', compact('property')) !!}
+
+
+
+
+                @if(is_review_enabled())
+                    <!-- Single Review -->
+                    <div id="reviewWrapper">
+                        {!! Theme::partial('real-estate.elements.review', compact('property')) !!}
+                    </div>
+                @endif
+            </div>
+
+            <!-- property Sidebar -->
+            <div class="col-lg-4 col-md-12 col-sm-12">
+
+                <div class="property_block_wrap_header">
+                    <a data-bs-toggle="collapse" data-parent="#loca" data-bs-target="#clSix" aria-controls="clSix"
+                       href="javascript:void(0);" aria-expanded="true" class="collapsed"><h4
+                            class="property_block_title">{{ __('Location') }}</h4></a>
+                </div>
+
+                <div id="clSix" class="panel-collapse collapse show">
+                    <div class="block-body">
+                        @if ($property->latitude && $property->longitude)
+                            {!! Theme::partial('real-estate.elements.traffic-map-modal', ['location' => $property->location . ', ' . $property->city_name]) !!}
+                        @else
+                            {!! Theme::partial('real-estate.elements.gmap-canvas', ['location' => $property->location]) !!}
+                        @endif
+                    </div>
+                </div>
+                 <!-- Single Block Wrap - Nearby -->
+                 {!! Theme::partial('real-estate.elements.nearby', ['property' => $property]) !!}
+
+            </div>
+
+
         </div>
 
         <div

@@ -69,27 +69,59 @@
     <!-- ============================================================== -->
     <!-- Top header  -->
 
-    <!-- <div class="topbar bg-brand p-2 d-none d-sm-block mb-1">
+    <div class="topbar bg-brand p-2 d-none d-sm-block mb-1">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                @if (is_plugin_active('language'))
+                    <div class="currency-wrapper">
+                        {!! $languages = apply_filters('language_switcher') !!}
+                    </div>
+                @endif
 
-    </div> -->
+                @if (is_plugin_active('real-estate'))
+                    <div class="topbar-right d-flex align-items-center">
+                        <div class="topbar-wishlist">
+                            <a class="text-white" href="{{ route('public.wishlist') }}"><i class="fas fa-heart"></i> {{ __('Wishlist') }}(<span class="wishlist-count">0</span>)</a>
+                        </div>
+                        @php $currencies = get_all_currencies(); @endphp
+                        @if (count($currencies) > 1)
+                        <div class="ms-3 text-white currency-wrapper">
+                            <div class="dropdown">
+                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ get_application_currency()->title }}
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    @foreach ($currencies as $currency)
+                                        <li>
+                                            <a class="dropdown-item"  href="{{ route('public.change-currency', $currency->title) }}" @if (get_application_currency_id() == $currency->id) class="active" @endif><span>{{ $currency->title }}</span></a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
+                @endif
+            </div>
+        </div>
+    </div>
     <div class="topbar bg-brand p-2 d-none d-sm-block">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
 
-                <div class="ms-3 text-white currency-wrapper">
-                    <i class="ti-mobile"></i> +91-9560252011
+
+                        <div class="topbar-wishlist">
+                            <a class="text-white" href="{{ route('public.wishlist') }}"><i class="fas fa-heart"></i> {{ __('Wishlist') }}(<span class="wishlist-count">0</span>)</a>
                         </div>
+
                         <div class="ms-3 text-white currency-wrapper">
                            Rera Number:465454
                         </div>
-                        <div class="" style="letter-spacing: 10px;">
-                            <a class="text-white" href="#"><i class="ti-facebook"></i></a>
-                            <a class="text-white" href="#"><i class="ti-twitter"></i></a>
-                            <a class="text-white" href="#"><i class="ti-linkedin"></i></a>
+                        <div class="ms-3 text-white currency-wrapper">
+                          9565832356
                         </div>
-
-
-
 
 
 

@@ -201,6 +201,16 @@ class PropertyForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label'],
                 'values'     => $this->getModel()->id ? $this->getModel()->site_images : [],
             ])
+            ->add('payment_plan_images[]', 'mediaImages', [
+                'label'      => 'Payment Plan Image',
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $this->getModel()->id ? $this->getModel()->payment_plan_images : [],
+            ])
+            ->add('price_plan_images[]', 'mediaImages', [
+                'label'      => 'Price Plan Image',
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $this->getModel()->id ? $this->getModel()->price_plan_images : [],
+            ])
             ->add('city_id', 'customSelect', [
                 'label'      => trans('plugins/real-estate::property.form.city'),
                 'label_attr' => ['class' => 'control-label'],
@@ -268,7 +278,7 @@ class PropertyForm extends FormAbstract
             ->add('rowOpen1', 'html', [
                 'html' => '<div class="row">',
             ])
-            ->add('number_bedroom', 'number', [
+            ->add('number_bedroom', 'text', [
                 'label'      => trans('plugins/real-estate::property.form.number_bedroom'),
                 'label_attr' => ['class' => 'control-label'],
                 'wrapper'    => [

@@ -44,6 +44,8 @@ class Property extends BaseModel
         'floor_images',
         'location_images',
         'site_images',
+        'payment_plan_images',
+        'price_plan_images',
         'number_bedroom',
         'number_bathroom',
         'number_floor',
@@ -157,6 +159,60 @@ class Property extends BaseModel
             return [];
         }
     }
+    public function getSiteImagesAttribute($value)
+    {
+        try {
+            if ($value === '[null]') {
+                return [];
+            }
+
+            $images = json_decode((string)$value, true);
+
+            if (is_array($images)) {
+                $images = array_filter($images);
+            }
+
+            return $images ?: [];
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
+    public function getPaymentPlanImagesAttribute($value)
+    {
+        try {
+            if ($value === '[null]') {
+                return [];
+            }
+
+            $images = json_decode((string)$value, true);
+
+            if (is_array($images)) {
+                $images = array_filter($images);
+            }
+
+            return $images ?: [];
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
+    public function getPricePlanImagesAttribute($value)
+    {
+        try {
+            if ($value === '[null]') {
+                return [];
+            }
+
+            $images = json_decode((string)$value, true);
+
+            if (is_array($images)) {
+                $images = array_filter($images);
+            }
+
+            return $images ?: [];
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
 
     /**
      * @return string|null
@@ -168,6 +224,18 @@ class Property extends BaseModel
     public function getLocationImageAttribute(): ?string
     {
         return Arr::first($this->location_images) ?? null;
+    }
+    public function getSiteImageAttribute(): ?string
+    {
+        return Arr::first($this->site_images) ?? null;
+    }
+    public function getPaymentPlanImageAttribute(): ?string
+    {
+        return Arr::first($this->payment_plan_images) ?? null;
+    }
+    public function getPricePlanImageAttribute(): ?string
+    {
+        return Arr::first($this->price_plan_images) ?? null;
     }
     public function getImageAttribute(): ?string
     {
