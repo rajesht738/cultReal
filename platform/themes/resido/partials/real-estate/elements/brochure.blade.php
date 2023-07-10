@@ -5,7 +5,8 @@
     <section class="container py-5">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-md-4">
-               <a href='{{$property->brochure}}' target="_blank" class="scale3"><img src='http://cultreality.test/storage/banners/download-pdf.png' alt="" srcset=""></a>
+               <a href='{{$property->brochure}}' target="_blank" class="scale3">
+                <img src={{Config::get('app.url')}}storage/banners/download-pdf.png alt="" srcset=""></a>
             </div>
         </div>
     </section>
