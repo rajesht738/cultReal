@@ -41,11 +41,14 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
+
+                </div>
+                <div class="col-lg-4 col-md-4">
                     <p class="mb-0">{!! clean(theme_option('copyright')) !!}</p>
                 </div>
 
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
                     @if (theme_option('social_links'))
                         <ul class="footer-bottom-social">
                             @foreach(json_decode(theme_option('social_links'), true) as $socialLink)
@@ -61,6 +64,25 @@
             </div>
         </div>
     </div>
+    <div class="bottomBtn" id="content-mobile">
+
+        <div class="btn" style="background-color:#4FCE5D; color:white;">
+          <i class="fab fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=+91-9560252011&amp;text=Hi%20I%20am%20interested%20in%20CultReality.com.in%20">
+          <span class="left_btn" style="color:#fff;">
+        WhatsApp
+          </span>
+          </a>
+        </div>
+
+
+        <div class="btn" style="background-color:#0e72b7; color:white;"><i class="ti-mobile"></i><a href="tel:+91-9643-353-535">
+        <span class="left_btn" style="color:#fff;">
+            Call Now
+        </span>
+        </a>
+        </div>
+
+        </div>
 </footer>
 <!-- ============================ Footer End ================================== -->
 

@@ -20,6 +20,7 @@ class PropertyRequest extends Request
             'name'              => 'required',
             'description'       => 'max:350',
             'content'           => 'required',
+            'brochure'          => ['mimes:jpeg,png,jpg,gif,svg,pdf','max:2048'],
             'number_bedroom'    => 'min:0|max:10000|nullable',
             'number_bathroom'   => 'numeric|min:0|max:10000|nullable',
             'number_floor'      => 'numeric|min:0|max:10000|nullable',

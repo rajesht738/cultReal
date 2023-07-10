@@ -211,6 +211,14 @@ class PropertyForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label'],
                 'values'     => $this->getModel()->id ? $this->getModel()->price_plan_images : [],
             ])
+            ->add('bank_loan_image', 'mediaImage', [
+                'label'      => 'Bank Loan Image',
+                'label_attr' => ['class' => 'control-label'],
+            ])
+            ->add('brochure', 'mediaImage', [
+                'label'      => 'Uplaod Brochure',
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('city_id', 'customSelect', [
                 'label'      => trans('plugins/real-estate::property.form.city'),
                 'label_attr' => ['class' => 'control-label'],

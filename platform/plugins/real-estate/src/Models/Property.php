@@ -46,6 +46,8 @@ class Property extends BaseModel
         'site_images',
         'payment_plan_images',
         'price_plan_images',
+        'bank_loan_images',
+        'brochures',
         'number_bedroom',
         'number_bathroom',
         'number_floor',
@@ -213,6 +215,22 @@ class Property extends BaseModel
             return [];
         }
     }
+    // public function getBankLoanImagesAttribute($value)
+    // {
+    //     try {
+    //         if ($value === '[null]') {
+    //             return '';
+    //         }
+
+    //         $images = $value;
+
+
+
+    //         return $images ?: '';
+    //     } catch (Exception $exception) {
+    //         return '';
+    //     }
+    // }
 
     /**
      * @return string|null
@@ -240,6 +258,16 @@ class Property extends BaseModel
     public function getImageAttribute(): ?string
     {
         return Arr::first($this->images) ?? null;
+    }
+    public function getBankLoanImageAttribute(): ?string
+    {
+
+        return $this->bank_loan_images ? RvMedia::getImageUrl($this->bank_loan_images, null, false, RvMedia::getDefaultImage()) : null;
+    }
+    public function getBrochureAttribute(): ?string
+    {
+
+        return $this->brochures ? RvMedia::getImageUrl($this->brochures, null, false, RvMedia::getDefaultImage()) : null;
     }
 
     /**

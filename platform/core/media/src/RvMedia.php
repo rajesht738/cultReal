@@ -990,7 +990,7 @@ class RvMedia
      */
     public function imageValidationRule(): string
     {
-        return 'required|image|mimes:jpg,jpeg,png,webp';
+        return 'required|image|mimes:jpg,jpeg,png,webp,pdf';
     }
 
     /**

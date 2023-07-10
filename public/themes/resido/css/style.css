@@ -6956,6 +6956,11 @@ ul.fr-grid-social li a {
     text-align: center;
     transition: all .2s
 }
+.scale3 img:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+}
 
 .property-search-type label.active, .property-search-type label:hover {
     background-color: #fd5332;
@@ -7087,7 +7092,7 @@ ul.fr-grid-social li a {
 }
 
 .nav-tabs .nav-item {
-    margin: 0
+    margin-right: 1px;
 }
 
 .nav-tabs .nav-link {
@@ -7108,9 +7113,31 @@ ul.fr-grid-social li a {
     border-color: #fd5332;
     color: #fff
 }
-
+.row.bankImg {
+    background: #F2F2F2;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+.row.brochure {
+    background: aquamarine;
+    padding: 10px;
+}
+.floortitle h2:after {
+    content: ' ';
+    background: #FFAE00;
+    height: 2px;
+    width: 85px;
+    display: flex;
+}
+#content-mobile {
+    display: block;
+    position: fixed;
+    left: 6px;
+    bottom: 0px;
+    z-index: 99;
+}
 .nav-tabs.customize-tab .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background: #2f4ba5 !important;
+    background: #112a7a !important;
     border-radius: 0;
     color: #fff;
     margin-right: 0

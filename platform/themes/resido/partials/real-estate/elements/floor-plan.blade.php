@@ -1,11 +1,11 @@
-<div style="display: flex; justify-content:center; align-items:center">
-    <h2>Floor Plan / Details</h2>
+<div class="floortitle" style="display: flex; justify-content:center; align-items:center">
+    <h2>Floor Plan & Details</h2>
 </div>
 
     <div class="row">
         <section class="container py-5">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-8">
                     <ul id="tabs" class="nav nav-tabs nav-fill">
                         <li class="nav-item"><a href="#floorPlan" data-target="#home1" data-bs-toggle="tab"
                                 class="nav-link active">FLOOR PLAN</a></li>

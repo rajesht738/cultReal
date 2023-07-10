@@ -107,9 +107,11 @@
 
             </div>
         </div>
-        <div class="row">
+        <div>
             {{-- {{dd($property)}} --}}
             {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
+            {!! Theme::partial('real-estate.elements.bank-image', compact('property')) !!}
+            {!! Theme::partial('real-estate.elements.brochure', compact('property')) !!}
         </div>
         <div class="row">
 

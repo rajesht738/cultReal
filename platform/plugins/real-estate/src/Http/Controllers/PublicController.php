@@ -169,7 +169,10 @@ class PublicController extends Controller
             $price_plan_images[] = RvMedia::getImageUrl($flimage, null, false, RvMedia::getDefaultImage());
         }
 
-        return Theme::scope('real-estate.property', compact('property', 'images', 'floor_images','location_images','payment_plan_images','price_plan_images'))->render();
+     $bank_loan_image = RvMedia::getImageUrl($property->bank_loan_image, 'thumb', false, RvMedia::getDefaultImage());
+     $brochure = RvMedia::getImageUrl($property->brochures, null, false, RvMedia::getDefaultImage());
+
+     return Theme::scope('real-estate.property', compact('property', 'images', 'floor_images','location_images','payment_plan_images','price_plan_images','brochure'))->render();
     }
 
     /**
