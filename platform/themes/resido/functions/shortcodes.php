@@ -28,7 +28,7 @@ app()->booted(function () {
 
         if (is_plugin_active('blog')) {
             add_shortcode('latest-news', __('Latest news'), __('Latest news'), function ($shortcode) {
-                $limit = $shortcode->limit ?: 3;
+                $limit = $shortcode->limit ?: 10;
 
                 $posts = get_all_posts(true, $limit);
                 return Theme::partial('shortcodes.latest-news', [

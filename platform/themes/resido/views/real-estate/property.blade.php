@@ -62,10 +62,10 @@
                                 @endif
                             </div>
                         </li>
-                        <li><a href="JavaScript:Void(0);" data-id="{{ $property->id }}"
+                        {{-- <li><a href="JavaScript:Void(0);" data-id="{{ $property->id }}"
                                class="btn btn-likes add-to-wishlist" data-bs-toggle="tooltip"
                                data-original-title="Save"><i
-                                    class="fas fa-heart"></i>{{ __('Save') }}</a></li>
+                                    class="fas fa-heart"></i>{{ __('Save') }}</a></li> --}}
                     </ul>
                 </div>
 
@@ -107,11 +107,12 @@
 
             </div>
         </div>
-        <div>
+
             {{-- {{dd($property)}} --}}
+            {!! Theme::partial('real-estate.elements.gallery', compact('property')) !!}
+        <div>
             {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
-            {!! Theme::partial('real-estate.elements.bank-image', compact('property')) !!}
-            {!! Theme::partial('real-estate.elements.brochure', compact('property')) !!}
+
         </div>
         <div class="row">
 
@@ -145,13 +146,13 @@
                 <!-- Single Block Wrap -->
                 <div class="property_block_wrap style-2">
 
-
-
+                    {!! Theme::partial('real-estate.elements.brochure', compact('property')) !!}
+                    {!! Theme::partial('real-estate.elements.bank-image', compact('property')) !!}
 
                 </div>
 
                 <!-- Single Block Wrap - Gallery -->
-                {!! Theme::partial('real-estate.elements.gallery', compact('property')) !!}
+
 
 
 

@@ -24,16 +24,7 @@
                                 <div class="col-md-10">
                                    {{-- {{ dd($property->images) }} --}}
                                     @if (!empty($property->floor_images))
-                                        <div class="property_block_wrap style-2">
-
-                                            <div class="property_block_wrap_header">
-                                                <a data-bs-toggle="collapse" data-parent="#clSev"
-                                                    data-bs-target="#clSev" aria-controls="clOne"
-                                                    href="javascript:void(0);" aria-expanded="true" class="collapsed">
-                                                    <h4 class="property_block_title"> Floor Plan</h4>
-                                                </a>
-                                            </div>
-
+                                        <div class="style-2">
                                             <div id="clSev" class="panel-collapse collapse show">
                                                 <div class="block-body">
                                                     <ul class="list-gallery-inline">
@@ -63,16 +54,7 @@
                                 <div class="col-md-10">
                                    {{-- {{ dd($property->images) }} --}}
                                     @if (!empty($property->location_images))
-                                        <div class="property_block_wrap style-2">
-
-                                            <div class="property_block_wrap_header">
-                                                <a data-bs-toggle="collapse" data-parent="#clSev"
-                                                    data-bs-target="#clSev" aria-controls="clOne"
-                                                    href="javascript:void(0);" aria-expanded="true" class="collapsed">
-                                                    <h4 class="property_block_title"> Location Plan</h4>
-                                                </a>
-                                            </div>
-
+                                        <div class="style-2">
                                             <div id="clSev" class="panel-collapse collapse show">
                                                 <div class="block-body">
                                                     <ul class="list-gallery-inline">
@@ -103,16 +85,7 @@
                                 <div class="col-md-10">
                                    {{-- {{ dd($property->images) }} --}}
                                     @if (!empty($property->site_images))
-                                        <div class="property_block_wrap style-2">
-
-                                            <div class="property_block_wrap_header">
-                                                <a data-bs-toggle="collapse" data-parent="#clSev"
-                                                    data-bs-target="#clSev" aria-controls="clOne"
-                                                    href="javascript:void(0);" aria-expanded="true" class="collapsed">
-                                                    <h4 class="property_block_title"> Site Plan</h4>
-                                                </a>
-                                            </div>
-
+                                        <div class="style-2">
                                             <div id="clSev" class="panel-collapse collapse show">
                                                 <div class="block-body">
                                                     <ul class="list-gallery-inline">
@@ -142,15 +115,8 @@
                             <div class="col-md-10">
                                 {{-- {{ dd($property->images) }} --}}
                                  @if (!empty($property->payment_plan_images))
-                                     <div class="property_block_wrap style-2">
+                                     <div class="style-2">
 
-                                         <div class="property_block_wrap_header">
-                                             <a data-bs-toggle="collapse" data-parent="#clSev"
-                                                 data-bs-target="#clSev" aria-controls="clOne"
-                                                 href="javascript:void(0);" aria-expanded="true" class="collapsed">
-                                                 <h4 class="property_block_title"> Payment Plan</h4>
-                                             </a>
-                                         </div>
 
                                          <div id="clSev" class="panel-collapse collapse show">
                                              <div class="block-body">
@@ -181,16 +147,7 @@
                             <div class="col-md-10">
                                 {{-- {{ dd($property->images) }} --}}
                                  @if (!empty($property->price_plan_images))
-                                     <div class="property_block_wrap style-2">
-
-                                         <div class="property_block_wrap_header">
-                                             <a data-bs-toggle="collapse" data-parent="#clSev"
-                                                 data-bs-target="#clSev" aria-controls="clOne"
-                                                 href="javascript:void(0);" aria-expanded="true" class="collapsed">
-                                                 <h4 class="property_block_title"> Price Plan</h4>
-                                             </a>
-                                         </div>
-
+                                     <div class="style-2">
                                          <div id="clSev" class="panel-collapse collapse show">
                                              <div class="block-body">
                                                  <ul class="list-gallery-inline">
