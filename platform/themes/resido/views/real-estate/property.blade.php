@@ -144,7 +144,7 @@
                 {!! Theme::partial('real-estate.elements.video', ['object' => $property]) !!}
 
                 <!-- Single Block Wrap -->
-                <div class="property_block_wrap style-2">
+                <div class="style-2">
 
                     {!! Theme::partial('real-estate.elements.brochure', compact('property')) !!}
                     {!! Theme::partial('real-estate.elements.bank-image', compact('property')) !!}
