@@ -1,16 +1,3 @@
-<section class="customer-logos slider" style="padding: 1% 0%">
-    <div class="slide">
-        <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" alt="luxury-letter-e-logo-design_1017-8903.jpg">
-    </div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg" alt="3d-box-logo_1103-876.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" alt="blue-tech-logo_1103-822.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" alt="colors-curl-logo-template_23-2147536125.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" alt="abstract-cross-logo_23-2147536124.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" alt="football-logo-background_1195-244.jpg"></div>
-    <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" alt="background-of-spots-halftone_1035-3847.jpg"></div>
-
- </section>
-
 {!! dynamic_sidebar('footer_sidebar_1') !!}
 <!-- ============================ Footer Start ================================== -->
 <footer class="dark-footer skin-dark-footer">
@@ -94,7 +81,58 @@
         </span>
         </a>
         </div>
+        <div class="floating-contact-form">
+            <div class="form-container">
+                {!! Form::open(['route' => 'public.send.consult', 'method' => 'POST', 'class' => 'contact-form', 'id' => 'contactForm']) !!}
+                <div class="row">
+                    {{-- <input type="hidden" name="data_id" value="{{ $data->id }}"> --}}
+                    <div class="form-group">
+                        <input class="form-control" name="name" id="name" type="text" placeholder="{{ __('Name') }} *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" class="form-control" placeholder="{{ __('Phone') }} *"
+                            data-validation-engine="validate[required]"
+                            data-errormessage-value-missing="{{ __('Please enter phone number') }}!">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="email" id="email" type="email" placeholder="{{ __('Email') }}">
+                    </div>
+                    <div class="form-group">
+                        {{-- <input type="text" class="form-control" placeholder="{{ __('Subject') }} *" value="{{ $data->name }}"
+                            readonly> --}}
+                    </div>
+                    <div class="form-group">
+                        <textarea name="content" class="form-control" rows="5" placeholder="{{ __('Message') }}"></textarea>
+                    </div>
+                    @if (setting('enable_captcha') && is_plugin_active('captcha'))
+                        <div class="form-group">
+                            {!! Captcha::display() !!}
+                        </div>
+                    @endif
+                    <div class="form-group">
+                        <button class="btn btn-black btn-md rounded full-width" type="submit">{{ __('Send Message') }}</button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="alert alert-success text-success text-left" style="display: none;">
+                        <span></span>
+                    </div>
+                    <div class="alert alert-danger text-danger text-left" style="display: none;">
+                        <span></span>
+                    </div>
+                </div>
 
+
+                {!! Form::close() !!}
+                    </div>
+
+            <div class="btn contact-icon" style="background-color:#0e72b7; color:white;">
+                 <i class="fas fa-comments"></i>
+                <span class="left_btn" style="color:#fff;">
+                   Enquiry Now
+                </span>
+            </div>
+          </div>
         </div>
 </footer>
 <!-- ============================ Footer End ================================== -->

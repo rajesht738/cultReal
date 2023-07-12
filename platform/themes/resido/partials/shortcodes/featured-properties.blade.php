@@ -1,4 +1,4 @@
-<section class="bg-light">
+{{-- <section class="bg-light">
     <div class="container">
 
         <div class="row justify-content-center">
@@ -31,9 +31,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
-{{-- <section class="pt-0">
+<section class="pt-0">
     <div class="container">
 
         <div class="row justify-content-center">
@@ -68,4 +68,4 @@
         </div>
 
     </div>
-</section> --}}
+</section>

@@ -15,7 +15,7 @@
         ]);
     }
 @endphp
-<section>
+{{-- <section>
     <div class="container">
 
         <div class="row justify-content-center">
@@ -62,8 +62,8 @@
             </div>
         </div>
     </div>
-</section>
-{{-- <section class="pt-0">
+</section> --}}
+<section class="pt-0">
     <div class="container">
 
         <div class="row justify-content-center">
@@ -111,4 +111,4 @@
         </div>
 
     </div>
-</section> --}}
+</section>

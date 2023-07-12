@@ -7742,3 +7742,33 @@ $(document).ready(function(){
         }]
     });
 });
+const formInputs = document.querySelectorAll(
+    ".floating-contact-form .form-container .form-input"
+  );
+
+  const contactIcon = document.querySelector(
+    ".bottomBtn .contact-icon"
+  );
+
+  const formContainer = document.querySelector(
+    ".floating-contact-form .form-container"
+  );
+
+  contactIcon.addEventListener("click", () => {
+    formContainer.classList.toggle("active");
+  });
+
+//   $("body").click(function(){ $(".formContainer").fadeOut(); });
+  formInputs.forEach((i) => {
+    i.addEventListener("focus", () => {
+      i.previousElementSibling.classList.add("active");
+    });
+  });
+
+  formInputs.forEach((i) => {
+    i.addEventListener("blur", () => {
+      if (i.value === "") {
+        i.previousElementSibling.classList.remove("active");
+      }
+    });
+  });

@@ -1,3 +1,5 @@
+<div class="floating-contact-form">
+    <div class="form-container">
 {!! Form::open(['route' => 'public.send.consult', 'method' => 'POST', 'class' => 'contact-form', 'id' => 'contactForm']) !!}
 <div class="row">
     <input type="hidden" name="data_id" value="{{ $data->id }}">
@@ -39,3 +41,5 @@
 
 
 {!! Form::close() !!}
+    </div>
+    </div>

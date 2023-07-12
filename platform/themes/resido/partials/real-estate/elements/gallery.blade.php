@@ -27,17 +27,24 @@
 
     </div>
 @endif --}}
-<div class="imageSlider">
-<div class="featured_slick_gallery-slide">
+<div class="gallery" style="margin-bottom: 3%">
+    <div class="floortitle" style="display: flex; justify-content:center; align-items:center">
+        <h2>Gallery</h2>
+    </div>
+
+<div class="featured_slick_gallery-slide py-5" >
+
+
     @foreach ($property->images as $index => $image)
-        <div class="featured_slick_padd">
+
 
             <a href="{{ RvMedia::getImageUrl($image, null, false, RvMedia::getDefaultImage()) }}" class="mfp-gallery">
                 <img src="{{ RvMedia::getImageUrl($image, 'property_large', false, RvMedia::getDefaultImage()) }}"
                     class="img-fluid mx-auto" alt="{{ $property->name }}-{{ $index }}" />
             </a>
 
-        </div>
+
     @endforeach
 </div>
+
 </div>

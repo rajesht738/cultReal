@@ -1,5 +1,6 @@
 <!-- ============================ Property Header Info Start================================== -->
-<section class="bg-title">
+<section class="bg-title" style="background-image: url({{env('APP_URL').'storage/'.$property->image}});
+  background-repeat: no-repeat;background-size: 100%;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-11 col-md-12">
