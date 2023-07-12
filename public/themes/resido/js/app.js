@@ -7747,7 +7747,7 @@ const formInputs = document.querySelectorAll(
   );
 
   const contactIcon = document.querySelector(
-    ".bottomBtn .contact-icon"
+    ".floating-contact-form .contact-icon"
   );
 
   const formContainer = document.querySelector(
@@ -7757,7 +7757,6 @@ const formInputs = document.querySelectorAll(
   contactIcon.addEventListener("click", () => {
     formContainer.classList.toggle("active");
   });
-
 
   formInputs.forEach((i) => {
     i.addEventListener("focus", () => {
