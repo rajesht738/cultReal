@@ -7758,7 +7758,7 @@ const formInputs = document.querySelectorAll(
     formContainer.classList.toggle("active");
   });
 
-//   $("body").click(function(){ $(".formContainer").fadeOut(); });
+
   formInputs.forEach((i) => {
     i.addEventListener("focus", () => {
       i.previousElementSibling.classList.add("active");
