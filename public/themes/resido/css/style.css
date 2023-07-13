@@ -2,6 +2,9 @@
 /* .slick-slide {
     margin: 0px 20px;
 } */
+.note.note-warning{
+    display: none;
+}
 .row.px-5.py-5.services {
     display: flex;
     align-items: center;
