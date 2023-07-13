@@ -41,7 +41,7 @@
 <!-- ============================ Property Detail Start ================================== -->
 <section class="property-detail gray-simple">
     <div data-property-id="{{ $property->id }}"></div>
-    <div class="container" style="max-width: 100%;">
+
         <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12">
                 <div class="property_block_wrap style-2">
@@ -98,7 +98,9 @@
                         <!-- Agent Detail -->
                         <div class="sides-widget">
                             <div class="sides-widget-header">
-                                @if ($author->username)
+                                <h3 style="color: white; text-align:center;">Interested to Buy Property
+                                    Please Fill The Form</h3>
+                                {{-- @if ($author->username)
                                     <div class="agent-photo">
                                         <img src="{{ RvMedia::getImageUrl($author->avatar->url, 'thumb') }}"
                                             alt="{{ $author->name }}">
@@ -112,7 +114,7 @@
                                                     class="lni-phone-handset"></i>{{ $author->phone }}</span></a>
                                     </div>
                                     <div class="clearfix"></div>
-                                @endif
+                                @endif --}}
                             </div>
 
                             <div class="sides-widget-body simple-form">
@@ -175,26 +177,25 @@
 
             </div>
         </div>
-        <div class="row">
-             <!-- Amenities -->
-            {!! Theme::partial('real-estate.elements.amenities', ['property' => $property]) !!}
-            <div class="property_block_wrap">
-                {!! $property->highlight !!}
-            </div>
-        </div>
+
+
 
         {{-- {{dd($property)}} --}}
+        {!! Theme::partial('real-estate.elements.amenities', ['property' => $property]) !!}
 
-        <div class="floor">
-            {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
-        </div>
-        <div class="row" style="display: flex;
-        align-items: center;
-        justify-content: center;">
-            <div class="col-md-12">
-            {!! Theme::partial('real-estate.elements.gallery', ['property' => $property]) !!}
-        </div>
-        </div>
+    </section>
+    <div class="row">
+        <!-- Amenities -->
+       {{-- {!! Theme::partial('real-estate.elements.amenities', ['property' => $property]) !!} --}}
+       <div class="property_block_wrap">
+           {!! $property->highlight !!}
+       </div>
+   </div>
+    <div class="floor">
+        {!! Theme::partial('real-estate.elements.floor-plan', compact('property')) !!}
+    </div>
+
+    <section class="property-detail gray-simple">
          <!-- property main detail -->
         <div class="row">
             <!-- property main detail -->
@@ -273,16 +274,24 @@
 
             </div>
         </div>
+    </section>
+    <div class="row" style="display: flex;
+    align-items: center;
+    justify-content: center;padding-top: 30px;">
+        <div class="col-md-12">
+        {!! Theme::partial('real-estate.elements.gallery', ['property' => $property]) !!}
+    </div>
+    </div>
 
-        <div class="row">{!! do_shortcode(
+       {!! do_shortcode(
             '[recently-viewed-properties title="' .
                 __('Recently Viewed Properties') .
                 '" subtitle="' .
                 __('Your currently viewed properties.') .
                 '"][/recently-viewed-properties]',
-        ) !!}</div>
-    </div>
-</section>
+        ) !!}
+
+
 
 @if ($property->latitude && $property->longitude)
     <div data-magnific-popup="#trafficMap" data-map-id="trafficMap" data-popup-id="#traffic-popup-map-template"

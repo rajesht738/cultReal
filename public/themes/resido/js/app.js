@@ -7742,6 +7742,28 @@ $(document).ready(function(){
         }]
     });
 });
+$(document).ready(function(){
+    $('.amenties-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
 const formInputs = document.querySelectorAll(
     ".floating-contact-form .form-container .form-input"
   );
@@ -7756,8 +7778,17 @@ const formInputs = document.querySelectorAll(
 
   contactIcon.addEventListener("click", () => {
     formContainer.classList.toggle("active");
+    var overlay = document.getElementById('backgroundOverlay');
+    overlay.style.display = "block";
   });
-
+  window.addEventListener('click', function(e) {
+    var target = e.target.classList.value;
+    if(!target) {
+        formContainer.classList.toggle("active", false);
+        var overlay = document.getElementById('backgroundOverlay');
+        overlay.style.display = "none";
+    }
+});
   formInputs.forEach((i) => {
     i.addEventListener("focus", () => {
       i.previousElementSibling.classList.add("active");
@@ -7771,3 +7802,4 @@ const formInputs = document.querySelectorAll(
       }
     });
   });
+

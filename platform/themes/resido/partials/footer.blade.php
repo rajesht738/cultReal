@@ -81,8 +81,12 @@
         </span>
         </a>
         </div>
-        <div class="floating-contact-form">
-            <div class="form-container">
+        <div id="backgroundOverlay"></div>
+        <div class="floating-contact-form" >
+
+            <div class="form-container" id="cfrm">
+                <h4 style="color: white; text-align:center;">DROP AN ENQUIRY</h4>
+                <h6 style="color: white; text-align:center;">To Schedule A Site Visit</h6>
                 {!! Form::open(['route' => 'public.send.consult', 'method' => 'POST', 'class' => 'contact-form', 'id' => 'contactForm']) !!}
                 <div class="row">
                     {{-- <input type="hidden" name="data_id" value="{{ $data->id }}"> --}}
@@ -126,7 +130,7 @@
                 {!! Form::close() !!}
                     </div>
 
-            <div class="btn contact-icon" style="background-color:#0e72b7; color:white;">
+            <div class="btn contact-icon" style="background-color:#d7255a; color:white;">
                  <i class="fas fa-comments"></i>
                 <span class="left_btn" style="color:#fff;">
                    Enquiry Now

@@ -4,7 +4,7 @@
             <div class="inc-fleat-icon">
                 <img src="{{ Theme::asset()->url('img/bed.svg') }}" width="13" alt="bed icon">
             </div>
-            {{ number_format($property->number_bedroom) }} {{ __('Beds') }}
+            {{ $property->number_bedroom }} {{ __('Beds') }}
         </div>
     @endif
     @if ($property->number_bathroom)
