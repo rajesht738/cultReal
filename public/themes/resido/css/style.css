@@ -2,6 +2,18 @@
 /* .slick-slide {
     margin: 0px 20px;
 } */
+.heiglight ul li:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    border: 1px solid yellow;
+    color: black;
+    margin-right: 6px;
+    background: yellow;
+}
 .note.note-warning{
     display: none;
 }
