@@ -3450,7 +3450,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 textarea.form-control {
-    height: 180px
+    height: 100px
 }
 
 .tip-topdata {
@@ -7379,13 +7379,22 @@ ul.fr-grid-social li a {
     color: #fff
 }
 .row.bankImg {
-    background: #F2F2F2;
+    background: white;
     padding-top: 40px;
     padding-bottom: 0px;
+    border: 1px solid #ffae00;
 }
 .row.brochure {
     background:white;
     padding: 10px;
+}
+.form-subcriber .form-control {
+    background-clip: initial;
+    border: 1px solid #e0ecf5;
+    box-shadow: none;
+    font-size: 16px;
+    height: 52px;
+    padding: 0.5rem 0.75rem;
 }
 .floortitle h2:after {
     content: ' ';

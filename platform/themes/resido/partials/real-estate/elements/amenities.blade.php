@@ -1,6 +1,6 @@
 @if (!empty($property->features))
     <!-- Single Block Wrap -->
-    <div class="property_block_wrap style-2" style="margin: 0 0 0 36px; width:97%">
+    <div class="property_block_wrap style-2" style="margin: 0 0 0 22px; width:97%">
         {{-- <section class="customer-logos slider">
             <div class="slide">
                 <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg">
