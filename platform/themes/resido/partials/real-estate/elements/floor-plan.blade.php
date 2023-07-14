@@ -5,7 +5,7 @@
     <div class="row">
         <section class="container py-5">
             <div class="row d-flex align-items-center justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <ul id="tabs" class="nav nav-tabs nav-fill">
                         <li class="nav-item"><a href="#floorPlan" data-target="#home1" data-bs-toggle="tab"
                                 class="nav-link active">FLOOR PLAN</a></li>

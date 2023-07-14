@@ -85,8 +85,8 @@
         <div class="floating-contact-form" >
 
             <div class="form-container" id="cfrm">
-                <h4 style="color: white; text-align:center;">DROP AN ENQUIRY</h4>
-                <h6 style="color: white; text-align:center;">To Schedule A Site Visit</h6>
+                <h4 style="color: white; text-align:center; font-size: 18px;">DROP AN ENQUIRY</h4>
+                <h6 style="color: white; text-align:center;font-size: 14px;" >To Schedule A Site Visit</h6>
                 {!! Form::open(['route' => 'public.send.consult', 'method' => 'POST', 'class' => 'contact-form', 'id' => 'contactForm']) !!}
                 <div class="row">
                     {{-- <input type="hidden" name="data_id" value="{{ $data->id }}"> --}}

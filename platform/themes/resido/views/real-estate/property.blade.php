@@ -97,9 +97,11 @@
                 @if ($author = $property->author)
                     <!-- Agent Detail -->
                     <div class="sides-widget">
-                        <div class="sides-widget-header">
-                            <h3 style="color: white; text-align:center;">Interested to Buy Property
-                                Please Fill The Form</h3>
+                        <div class="sides-widget-header" style="display:block;">
+                            <div>
+                            <h5 style="color: white; text-align:center;font-size:18px;">Interested to Buy Property</h5>
+                               <h6 style="color: white; text-align:center;font-size:12px;"> Please Fill The Form</h6>
+                            </div>
                             {{-- @if ($author->username)
                                     <div class="agent-photo">
                                         <img src="{{ RvMedia::getImageUrl($author->avatar->url, 'thumb') }}"
