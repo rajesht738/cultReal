@@ -15,8 +15,7 @@
                                 class="nav-link">SITE PLAN</a></li>
                         <li class="nav-item"><a href="#paymentPlan" data-target="#messages1" data-bs-toggle="tab"
                                 class="nav-link">PAYMENT PLAN</a></li>
-                        <li class="nav-item"><a href="#pricePlan" data-target="#messages1" data-bs-toggle="tab"
-                                class="nav-link">PRICE LIST</a></li>
+                        <li class="nav-item btn contact-icon"><a href="" data-target="" class="nav-link">PRICE LIST</a></li>
                     </ul>
                     <div id="tabsContent" class="tab-content p-5 border border-top-0 rounded">
                         <div id="floorPlan" class="tab-pane fade active show">

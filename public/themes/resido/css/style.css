@@ -1,7 +1,10 @@
 @charset "UTF-8";
-/* .slick-slide {
-    margin: 0px 20px;
-} */
+@media ( max-width:400px) {
+    /* .slick-slide {
+        margin: 0px 10px;
+    } */
+}
+
 .heiglight ul li:before{
     font-family: "Font Awesome 5 Free";
     content: "\f00c";
@@ -36,8 +39,8 @@
     position: fixed;
     bottom: 0;
     cursor: pointer;
-    padding: 12px;
-    left: 21%;
+    /* padding: 12px; */
+    left: 17%;
     margin-left: 5px;
   }
 
@@ -102,7 +105,7 @@
   .floating-contact-form form textarea {
     width: 100%;
     padding: 14px 32px;
-    padding-left: 40px;
+    padding-left: 12px;
     font-size: 16px;
     border: 1px solid rgba(0, 47, 73, 0.3);
     border-radius: 8px;
@@ -223,6 +226,7 @@
 }
 .amenties-logos .slide.slick-slide{
     padding-left: 45px;
+    text-align: center;
 }
 .amenties-logos .slide .slick-slider
 {
@@ -2294,7 +2298,7 @@ ul.list-style-none li a:hover {
     border-radius: .1rem;
     color: #fff;
     cursor: pointer;
-    padding: 12px 25px;
+    /* padding: 12px 25px; */
     transition: 0s
 }
 
@@ -3337,9 +3341,9 @@ a.btn-trans-video i {
     padding: 0 10px
 }
 
-.item-slide, .property-slide {
+/* .item-slide, .property-slide {
     margin: 0 -15px
-}
+} */
 
 .sec-heading2 {
     align-items: center;

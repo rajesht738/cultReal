@@ -1,5 +1,6 @@
 {!! dynamic_sidebar('footer_sidebar_1') !!}
 <!-- ============================ Footer Start ================================== -->
+
 <footer class="dark-footer skin-dark-footer">
     <div class="py-5">
         <div class="container">

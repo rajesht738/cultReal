@@ -53,7 +53,7 @@
                     @foreach($properties as $property)
                     <!-- Single Property -->
                     @if($style == 1)
-                    <div class="col-lg-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-4">
                         {!! Theme::partial('real-estate.properties.item-list', compact('property')) !!}
                     @else
                     <div class="col-lg-4 col-md-6 col-sm-12">

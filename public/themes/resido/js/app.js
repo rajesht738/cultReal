@@ -7772,6 +7772,7 @@ const formInputs = document.querySelectorAll(
     ".floating-contact-form .contact-icon"
   );
 
+
   const formContainer = document.querySelector(
     ".floating-contact-form .form-container"
   );
@@ -7781,6 +7782,7 @@ const formInputs = document.querySelectorAll(
     var overlay = document.getElementById('backgroundOverlay');
     overlay.style.display = "block";
   });
+
   window.addEventListener('click', function(e) {
     var target = e.target.classList.value;
     if(!target) {
