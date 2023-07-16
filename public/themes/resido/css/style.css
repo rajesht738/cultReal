@@ -3269,6 +3269,9 @@ a.btn-trans-video i {
     .footer-widget .col-lg-7.col-md-6 {
         padding: 3px 29px;
     }
+    .bankImg .col-md-2 {
+        text-align: center;
+    }
 }
 
 @media (min-width:576px) {
