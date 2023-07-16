@@ -27,10 +27,10 @@ class FeatureForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
-            // ->add('feature_image', 'mediaImage', [
-            //     'label'      => 'Image',
-            //     'label_attr' => ['class' => 'control-label'],
-            // ])
+            ->add('feature_image', 'mediaImage', [
+                'label'      => 'Image',
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('icon', 'text', [
                 'label'         => trans('plugins/real-estate::feature.form.icon'),
                 'label_attr'    => ['class' => 'control-label'],

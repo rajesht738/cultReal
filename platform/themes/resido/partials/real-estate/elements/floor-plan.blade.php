@@ -69,7 +69,7 @@
                         margin-right: 10px;
                         padding: 0.7rem 2rem;
                         cursor: pointer;">
-                             <span class="left_btn" style="color:#fff;">
+                             <span class="left_btnn" style="color:#fff;">
                               PRICE LIST
                             </span>
                         </div>
