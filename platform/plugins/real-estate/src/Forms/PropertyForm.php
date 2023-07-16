@@ -215,7 +215,7 @@ class PropertyForm extends FormAbstract
                 'label'      => 'Bank Loan Image',
                 'label_attr' => ['class' => 'control-label'],
             ])
-            ->add('brochure', 'mediaImage', [
+            ->add('brochure', 'mediaFile', [
                 'label'      => 'Uplaod Brochure',
                 'label_attr' => ['class' => 'control-label'],
             ])
