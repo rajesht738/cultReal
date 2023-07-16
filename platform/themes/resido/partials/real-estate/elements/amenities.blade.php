@@ -46,8 +46,13 @@
             <div class="amenties-logos slider">
                 @foreach ($property->features as $index => $image)
                     <div class="slide">
-                        <i
-                            class="icon @if ($image->icon) {{ $image->icon }} @else fas fa-check @endif"></i>
+                        @if ($image->feature_image)
+                        <img src={{ env('APP_URL')}}storage/{{$image->feature_image}} alt="" style="height: 50px;
+                        width: 100px;">
+
+                        @else
+                        <i class="icon @if ($image->icon) {{ $image->icon }} @else fas fa-check @endif"></i>
+                        @endif
                         <p>{{ $image->name }}</p>
                     </div>
                 @endforeach

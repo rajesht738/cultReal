@@ -18,6 +18,7 @@ class FeatureForm extends FormAbstract
         $this
             ->setupModel(new Feature())
             ->setValidatorClass(FeatureRequest::class)
+            ->withCustomFields()
             ->add('name', 'text', [
                 'label'      => trans('plugins/real-estate::feature.form.name'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -26,6 +27,10 @@ class FeatureForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
+            // ->add('feature_image', 'mediaImage', [
+            //     'label'      => 'Image',
+            //     'label_attr' => ['class' => 'control-label'],
+            // ])
             ->add('icon', 'text', [
                 'label'         => trans('plugins/real-estate::feature.form.icon'),
                 'label_attr'    => ['class' => 'control-label'],
@@ -34,6 +39,8 @@ class FeatureForm extends FormAbstract
                     'data-counter' => 60,
                 ],
                 'default_value' => 'fas fa-check',
-            ]);
+            ])
+
+            ;
     }
 }

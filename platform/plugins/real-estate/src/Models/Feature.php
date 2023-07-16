@@ -24,6 +24,7 @@ class Feature extends BaseModel
      */
     protected $fillable = [
         'name',
+        'feature_image',
         'icon',
     ];
 

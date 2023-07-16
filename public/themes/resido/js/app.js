@@ -7771,6 +7771,9 @@ const formInputs = document.querySelectorAll(
   const contactIcon = document.querySelector(
     ".floating-contact-form .contact-icon"
   );
+  const contactIcon2 = document.querySelector(
+    ".floating-contact-form .contact-icon2"
+  );
 
 
   const formContainer = document.querySelector(
@@ -7778,6 +7781,11 @@ const formInputs = document.querySelectorAll(
   );
 
   contactIcon.addEventListener("click", () => {
+    formContainer.classList.toggle("active");
+    var overlay = document.getElementById('backgroundOverlay');
+    overlay.style.display = "block";
+  });
+  contactIcon2.addEventListener("click", () => {
     formContainer.classList.toggle("active");
     var overlay = document.getElementById('backgroundOverlay');
     overlay.style.display = "block";

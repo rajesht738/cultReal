@@ -62,7 +62,8 @@ class FeatureController extends BaseController
      * @return BaseHttpResponse
      */
     public function store(FeatureRequest $request, BaseHttpResponse $response)
-    {
+     {
+        // dd($request->all());
         $feature = $this->featureRepository->create($request->all());
 
         event(new CreatedContentEvent(FEATURE_MODULE_SCREEN_NAME, $request, $feature));
@@ -98,7 +99,7 @@ class FeatureController extends BaseController
     public function update($id, FeatureRequest $request, BaseHttpResponse $response)
     {
         $feature = $this->featureRepository->findOrFail($id);
-
+// dd($request->input());
         $feature->fill($request->input());
         $this->featureRepository->createOrUpdate($feature);
 
